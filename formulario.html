@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style_form.css">
+</head>
+
+<body>
+    <h1>Formulario de Información</h1>
+    <form action="formulario.php" method="post">
+        <fieldset>
+            <legend>Sus Datos</legend>
+            <p>
+                <label for="nom">Nombre y apellidos:</label>
+                <input type="text" maxlength="50" name="nombre" id="nom" placeholder="Escribe aqui..." autofocus
+                    required>
+            </p>
+            <p>
+                <label for="pass">Contraseña:</label>
+                <input type="password" minlength="4" maxlength="8" name="contraseña" id="pass" required>
+            </p>
+            <p>
+                <label for="user">Usuario:</label>
+                <input type="text" value="anónimo" disabled>
+            </p>
+            <legend>Nivel:</legend>
+            <p>
+                <input type="radio" value="profesional" name="nivel" id="prof">
+                <label for="prof">Profesional</label>
+            </p>
+            <p>
+                <input type="radio" value="avanzado" name="nivel" id="avan" checked>
+                <label for="avan">Avanzado</label>
+            </p>
+            <p>
+                <input type="radio" value="principiante" name="nivel" id="princ">
+                <label for="princ">Principiante</label>
+            </p>
+        </fieldset>
+        <p>
+            <label for="nac">Nacionalidad:</label>
+            <select name="nac" id="nac">
+                <option value="esp" selected>España</option>
+                <option value="ita">Italia</option>
+                <option value="fra">Francia</option>
+                <option value="por">Portugal</option>
+                <option value="ale">Alemania</option>
+                <option value="sui">Suiza</option>
+                <option value="bel">Bélgica</option>
+                <option value="aus">Austria</option>
+                <option value="uk">Reino Unido</option>
+                <option value="irl">Irlanda</option>
+            </select>
+        </p>
+        <p>
+            <label for="desc">Descripción:</label>
+            <textarea name="desc" id="desc" placeholder="Escribe aquí..." cols="30" rows="5"></textarea>
+        </p>
+        <p>
+            <input type="checkbox" name="promociones" id="promo" checked>
+            <label for="promo"> Deseo recibir información sobre novedades y ofertas</label>
+        </p>
+        <p>
+            <input type="checkbox" name="condiciones" id="cond" required>
+            <label for="cond">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre
+                protección de datos</label>
+        </p>
+        <p>
+            <label for="foto">Adjuntar una foto:</label>
+            <input type="file" name="foto" id="foto">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar datos">
+        </p>
+    </form>
+    <p>
+        <button type="button" onclick="location.href='../index.html'">Volver atrás</button>
+    </p>
+</body>
+
+</html>
